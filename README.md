@@ -4,10 +4,10 @@
   <a href=""><img src="https://img.shields.io/badge/Ease-v1.0-darkcyan"></a>
   <a href='https://arxiv.org/abs/2403.12030'><img src='https://img.shields.io/badge/Arxiv-2403.12030-b31b1b.svg?logo=arXiv'></a>
   <a href=""><img src="https://img.shields.io/github/stars/Srini2404/EASE?color=4fb5ee"></a>
-  <a href=""><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSrini2404%2FEASE_Implementation&count_bg=%23FFA500&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false"></a>
+  <a href=""><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSrini2404%2FEASE&count_bg=%23FFA500&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false"></a>
 </p>
 
-🎉The code repository is from the original implemenation for the paper "Expandable Subspace Ensemble for Pre-Trained Model-Based Class-Incremental Learning"  [[paper]](https://arxiv.org/abs/2403.12030)(CVPR24) in PyTorch. If you use any content of this repo for your work, please cite the following bib entry of the official implementation by the authors of the paper:
+🎉The code repository is from the original implemenation for the paper "Expandable Subspace Ensemble for Pre-Trained Model-Based Class-Incremental Learning" [[paper]](https://arxiv.org/abs/2403.12030)(CVPR24) in PyTorch. If you use any content of this repo for your work, please cite the following bib entry of the official implementation by the authors of the paper:
 
 ```
   @inproceedings{zhou2024expandable,
@@ -21,19 +21,37 @@
 
 ## Expandable Subspace Ensemble for Pre-Trained Model-Based Class-Incremental Learning
 
-Class-Incremental Learning (CIL) requires a learning system to continually learn new classes without forgetting. Despite the strong performance of Pre-Trained Models (PTMs) in CIL, a critical issue persists: learning new classes often results in the overwriting of old ones. Excessive modification of the network causes forgetting, while minimal adjustments lead to an inadequate fit for new classes. As a result, it is desired to figure out a way of efficient model updating without harming former knowledge.
-
-In this paper, we propose ExpAndable Subspace Ensemble (EASE) for PTM-based CIL. To enable model updating without conflict, we train a distinct lightweight adapter module for each new task, aiming to create task-specific subspaces. These adapters span a high-dimensional feature space, enabling joint decision-making across multiple subspaces. As data evolves, the expanding subspaces render the old class classifiers incompatible with new-stage spaces. Correspondingly, we design a semantic-guided prototype complement strategy that synthesizes old classes’ new features without using any old class instance. Extensive experiments on seven benchmark datasets verify EASE’s state-of-the-art performance.
-
+Cass-Incremental Learning (CIL) presents a funda-
+mental challenge in machine learning: how to accommodate new
+classes while preserving knowledge of previously learned ones.
+While Pre-Trained Models (PTMs) have demonstrated promising
+results in CIL scenarios, they frequently struggle with catas-
+trophic forgetting when adapting to new tasks. This report exam-
+ines the Expandable Subspace Ensemble (EASE) framework ,
+which addresses these limitations through task-specific adapter
+modules that create distinct subspaces for different tasks. EASE
+provides a way to make decisions by combining information from
+different parts (subspaces) and uses a strategy that generates
+helpful feature examples for older classes. This process doesn’t
+need access to the original training data, making it efficient
+and flexible. Comprehensive evaluation across seven benchmark
+datasets demonstrates EASE’s effectiveness in mitigating catas-
+trophic forgetting while efficiently integrating new knowledge.
+The codes, outputs, logs, my implementation and other related
+files are available in this repository.
 <img src='resources/teaser.png' width='900'>
 
 ## 🎊 Results
 
-We conducted experiments on seven benchmark datasets to verify the competitive performance of EASE.
+I conducted experiments on six benchmark datasets to verify the competitive performance of EASE.
 
+<img src='resouces/Cifar_Ease.webp',width='900'>
+This is the output of training the ViT-B/16-IN1K with EASE on CIFAR dataset. Other images are available in the `resources` directory.
 <img src='resources/result-img.png' width='900'>
 
 <img src='resources/result-table.png' width='900'>
+
+The above two images are the results from the original paper.
 
 ## Requirements
 ### 🗂️ Environment
@@ -44,7 +62,7 @@ We conducted experiments on seven benchmark datasets to verify the competitive p
 
 
 ### 🔎 Dataset
-We provide the processed datasets as follows:
+The link for the processed datasets as follows:
 - **CIFAR100**: will be automatically downloaded by the code.
 - **CUB200**:  Google Drive: [link](https://drive.google.com/file/d/1XbUpnWpJPnItt5zQ6sHJnsjPncnNLvWb/view?usp=sharing) or Onedrive: [link](https://entuedu-my.sharepoint.com/:u:/g/personal/n2207876b_e_ntu_edu_sg/EVV4pT9VJ9pBrVs2x0lcwd0BlVQCtSrdbLVfhuajMry-lA?e=L6Wjsc)
 - **ImageNet-R**: Google Drive: [link](https://drive.google.com/file/d/1SG4TbiL8_DooekztyCVK8mPmfhMo8fkR/view?usp=sharing) or Onedrive: [link](https://entuedu-my.sharepoint.com/:u:/g/personal/n2207876b_e_ntu_edu_sg/EU4jyLL29CtBsZkB6y-JSbgBzWF5YHhBAUz1Qw8qM2954A?e=hlWpNW)
@@ -80,7 +98,11 @@ After running the code, you will get a log file in the `logs/ease/cifar224/` fol
 
 ## 👨‍🏫 Acknowledgment
 
-We would like to express our gratitude to the following repositories for offering valuable components and functions that contributed to our work.
+I would like to express our gratitude to the following repositories for offering valuable components and functions that contributed to our work.
 
 - [PILOT: A Pre-Trained Model-Based Continual Learning Toolbox](https://github.com/sun-hailong/LAMDA-PILOT)
 - [RevisitingCIL](https://github.com/zhoudw-zdw/RevisitingCIL)
+
+I have also taken the code and modified it according to my requirements from the original repository
+
+-[CVPR24-Ease](https://github.com/sun-hailong/CVPR24-Ease)
