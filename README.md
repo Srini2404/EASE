@@ -45,8 +45,10 @@ files are available in this repository.
 
 I conducted experiments on six benchmark datasets to verify the competitive performance of EASE.
 
-<img src='resouces/Cifar_Ease.webp',width='900'>
+<img src='resources/Cifar_Ease.webp',width='900'>
+
 This is the output of training the ViT-B/16-IN1K with EASE on CIFAR dataset. Other images are available in the `resources` directory.
+
 <img src='resources/result-img.png' width='900'>
 
 <img src='resources/result-table.png' width='900'>
