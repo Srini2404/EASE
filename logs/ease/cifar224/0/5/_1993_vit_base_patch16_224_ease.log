@@ -1,297 +1,487 @@
-2023-11-16 15:53:03,244 [trainer.py] => config: ./exps/ease_cifar.json
-2023-11-16 15:53:03,244 [trainer.py] => prefix:  
-2023-11-16 15:53:03,244 [trainer.py] => dataset: cifar224
-2023-11-16 15:53:03,244 [trainer.py] => memory_size: 0
-2023-11-16 15:53:03,244 [trainer.py] => memory_per_class: 0
-2023-11-16 15:53:03,245 [trainer.py] => fixed_memory: False
-2023-11-16 15:53:03,245 [trainer.py] => shuffle: True
-2023-11-16 15:53:03,245 [trainer.py] => init_cls: 5
-2023-11-16 15:53:03,245 [trainer.py] => increment: 5
-2023-11-16 15:53:03,245 [trainer.py] => model_name: ease
-2023-11-16 15:53:03,245 [trainer.py] => backbone_type: vit_base_patch16_224_ease
-2023-11-16 15:53:03,245 [trainer.py] => device: [device(type='cuda', index=0)]
-2023-11-16 15:53:03,245 [trainer.py] => seed: 1993
-2023-11-16 15:53:03,245 [trainer.py] => init_epochs: 20
-2023-11-16 15:53:03,245 [trainer.py] => init_lr: 0.025
-2023-11-16 15:53:03,245 [trainer.py] => later_epochs: 20
-2023-11-16 15:53:03,245 [trainer.py] => later_lr: 0.025
-2023-11-16 15:53:03,245 [trainer.py] => batch_size: 48
-2023-11-16 15:53:03,245 [trainer.py] => weight_decay: 0.0005
-2023-11-16 15:53:03,245 [trainer.py] => min_lr: 0
-2023-11-16 15:53:03,245 [trainer.py] => optimizer: sgd
-2023-11-16 15:53:03,245 [trainer.py] => scheduler: cosine
-2023-11-16 15:53:03,245 [trainer.py] => pretrained: True
-2023-11-16 15:53:03,245 [trainer.py] => vpt_type: Deep
-2023-11-16 15:53:03,245 [trainer.py] => prompt_token_num: 5
-2023-11-16 15:53:03,245 [trainer.py] => ffn_num: 64
-2023-11-16 15:53:03,245 [trainer.py] => solve_method: sim
-2023-11-16 15:53:03,245 [trainer.py] => use_diagonal: False
-2023-11-16 15:53:03,245 [trainer.py] => recalc_sim: True
-2023-11-16 15:53:03,245 [trainer.py] => alpha: 0.1
-2023-11-16 15:53:03,245 [trainer.py] => use_init_ptm: False
-2023-11-16 15:53:03,245 [trainer.py] => beta: 0
-2023-11-16 15:53:03,246 [trainer.py] => use_old_data: False
-2023-11-16 15:53:03,246 [trainer.py] => use_reweight: True
-2023-11-16 15:53:03,246 [trainer.py] => moni_adam: False
-2023-11-16 15:53:03,246 [trainer.py] => adapter_num: -1
-2023-11-16 15:53:05,451 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
-2023-11-16 15:53:09,536 [trainer.py] => All params: 86988288
-2023-11-16 15:53:09,537 [trainer.py] => Trainable params: 1189632
-2023-11-16 15:53:09,538 [ease.py] => Learning on 0-5
-2023-11-16 15:55:39,061 [ease.py] => Task 0, Epoch 20/20 => Loss 0.123, Train_accy 96.24
-2023-11-16 15:55:44,513 [ease.py] => Task correct: 100.0
-2023-11-16 15:55:44,513 [ease.py] => Task acc: 99.8
-2023-11-16 15:55:44,546 [trainer.py] => No NME accuracy.
-2023-11-16 15:55:44,546 [trainer.py] => CNN: {'total': 99.8, '00-04': 99.8, 'old': 0, 'new': 99.8}
-2023-11-16 15:55:44,546 [trainer.py] => CNN top1 curve: [99.8]
-2023-11-16 15:55:44,546 [trainer.py] => CNN top5 curve: [100.0]
+2024-10-15 11:03:13,241 [trainer.py] => config: ./exps/ease_cifar.json
+2024-10-15 11:03:13,241 [trainer.py] => prefix:  
+2024-10-15 11:03:13,241 [trainer.py] => dataset: cifar224
+2024-10-15 11:03:13,241 [trainer.py] => memory_size: 0
+2024-10-15 11:03:13,242 [trainer.py] => memory_per_class: 0
+2024-10-15 11:03:13,242 [trainer.py] => fixed_memory: False
+2024-10-15 11:03:13,242 [trainer.py] => shuffle: True
+2024-10-15 11:03:13,242 [trainer.py] => init_cls: 5
+2024-10-15 11:03:13,242 [trainer.py] => increment: 5
+2024-10-15 11:03:13,242 [trainer.py] => model_name: ease
+2024-10-15 11:03:13,243 [trainer.py] => backbone_type: vit_base_patch16_224_ease
+2024-10-15 11:03:13,243 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-10-15 11:03:13,243 [trainer.py] => seed: 1993
+2024-10-15 11:03:13,243 [trainer.py] => init_epochs: 20
+2024-10-15 11:03:13,243 [trainer.py] => init_lr: 0.025
+2024-10-15 11:03:13,243 [trainer.py] => later_epochs: 20
+2024-10-15 11:03:13,243 [trainer.py] => later_lr: 0.025
+2024-10-15 11:03:13,243 [trainer.py] => batch_size: 48
+2024-10-15 11:03:13,243 [trainer.py] => weight_decay: 0.0005
+2024-10-15 11:03:13,244 [trainer.py] => min_lr: 0
+2024-10-15 11:03:13,244 [trainer.py] => optimizer: sgd
+2024-10-15 11:03:13,244 [trainer.py] => scheduler: cosine
+2024-10-15 11:03:13,244 [trainer.py] => pretrained: True
+2024-10-15 11:03:13,244 [trainer.py] => vpt_type: Deep
+2024-10-15 11:03:13,244 [trainer.py] => prompt_token_num: 5
+2024-10-15 11:03:13,244 [trainer.py] => ffn_num: 64
+2024-10-15 11:03:13,244 [trainer.py] => use_diagonal: False
+2024-10-15 11:03:13,244 [trainer.py] => recalc_sim: True
+2024-10-15 11:03:13,244 [trainer.py] => alpha: 0.1
+2024-10-15 11:03:13,245 [trainer.py] => use_init_ptm: False
+2024-10-15 11:03:13,245 [trainer.py] => beta: 0
+2024-10-15 11:03:13,245 [trainer.py] => use_old_data: False
+2024-10-15 11:03:13,245 [trainer.py] => use_reweight: True
+2024-10-15 11:03:13,245 [trainer.py] => moni_adam: False
+2024-10-15 11:03:13,245 [trainer.py] => adapter_num: -1
+2024-10-15 11:35:12,697 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-10-15 14:00:54,159 [trainer.py] => config: ./exps/ease_cifar.json
+2024-10-15 14:00:54,160 [trainer.py] => prefix:  
+2024-10-15 14:00:54,160 [trainer.py] => dataset: cifar224
+2024-10-15 14:00:54,160 [trainer.py] => memory_size: 0
+2024-10-15 14:00:54,160 [trainer.py] => memory_per_class: 0
+2024-10-15 14:00:54,160 [trainer.py] => fixed_memory: False
+2024-10-15 14:00:54,160 [trainer.py] => shuffle: True
+2024-10-15 14:00:54,160 [trainer.py] => init_cls: 5
+2024-10-15 14:00:54,160 [trainer.py] => increment: 5
+2024-10-15 14:00:54,160 [trainer.py] => model_name: ease
+2024-10-15 14:00:54,160 [trainer.py] => backbone_type: vit_base_patch16_224_ease
+2024-10-15 14:00:54,160 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-10-15 14:00:54,160 [trainer.py] => seed: 1993
+2024-10-15 14:00:54,160 [trainer.py] => init_epochs: 20
+2024-10-15 14:00:54,160 [trainer.py] => init_lr: 0.025
+2024-10-15 14:00:54,160 [trainer.py] => later_epochs: 20
+2024-10-15 14:00:54,160 [trainer.py] => later_lr: 0.025
+2024-10-15 14:00:54,160 [trainer.py] => batch_size: 48
+2024-10-15 14:00:54,160 [trainer.py] => weight_decay: 0.0005
+2024-10-15 14:00:54,160 [trainer.py] => min_lr: 0
+2024-10-15 14:00:54,160 [trainer.py] => optimizer: sgd
+2024-10-15 14:00:54,160 [trainer.py] => scheduler: cosine
+2024-10-15 14:00:54,160 [trainer.py] => pretrained: True
+2024-10-15 14:00:54,160 [trainer.py] => vpt_type: Deep
+2024-10-15 14:00:54,160 [trainer.py] => prompt_token_num: 5
+2024-10-15 14:00:54,160 [trainer.py] => ffn_num: 64
+2024-10-15 14:00:54,160 [trainer.py] => use_diagonal: False
+2024-10-15 14:00:54,160 [trainer.py] => recalc_sim: True
+2024-10-15 14:00:54,160 [trainer.py] => alpha: 0.1
+2024-10-15 14:00:54,160 [trainer.py] => use_init_ptm: False
+2024-10-15 14:00:54,160 [trainer.py] => beta: 0
+2024-10-15 14:00:54,160 [trainer.py] => use_old_data: False
+2024-10-15 14:00:54,163 [trainer.py] => use_reweight: True
+2024-10-15 14:00:54,163 [trainer.py] => moni_adam: False
+2024-10-15 14:00:54,163 [trainer.py] => adapter_num: -1
+2024-10-15 14:00:55,414 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-10-15 14:03:32,679 [trainer.py] => config: ./exps/ease_cifar.json
+2024-10-15 14:03:32,679 [trainer.py] => prefix:  
+2024-10-15 14:03:32,680 [trainer.py] => dataset: cifar224
+2024-10-15 14:03:32,680 [trainer.py] => memory_size: 0
+2024-10-15 14:03:32,680 [trainer.py] => memory_per_class: 0
+2024-10-15 14:03:32,680 [trainer.py] => fixed_memory: False
+2024-10-15 14:03:32,680 [trainer.py] => shuffle: True
+2024-10-15 14:03:32,680 [trainer.py] => init_cls: 5
+2024-10-15 14:03:32,680 [trainer.py] => increment: 5
+2024-10-15 14:03:32,680 [trainer.py] => model_name: ease
+2024-10-15 14:03:32,681 [trainer.py] => backbone_type: vit_base_patch16_224_ease
+2024-10-15 14:03:32,681 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-10-15 14:03:32,681 [trainer.py] => seed: 1993
+2024-10-15 14:03:32,681 [trainer.py] => init_epochs: 20
+2024-10-15 14:03:32,681 [trainer.py] => init_lr: 0.025
+2024-10-15 14:03:32,681 [trainer.py] => later_epochs: 20
+2024-10-15 14:03:32,681 [trainer.py] => later_lr: 0.025
+2024-10-15 14:03:32,681 [trainer.py] => batch_size: 48
+2024-10-15 14:03:32,681 [trainer.py] => weight_decay: 0.0005
+2024-10-15 14:03:32,681 [trainer.py] => min_lr: 0
+2024-10-15 14:03:32,682 [trainer.py] => optimizer: sgd
+2024-10-15 14:03:32,682 [trainer.py] => scheduler: cosine
+2024-10-15 14:03:32,682 [trainer.py] => pretrained: True
+2024-10-15 14:03:32,682 [trainer.py] => vpt_type: Deep
+2024-10-15 14:03:32,682 [trainer.py] => prompt_token_num: 5
+2024-10-15 14:03:32,682 [trainer.py] => ffn_num: 64
+2024-10-15 14:03:32,682 [trainer.py] => use_diagonal: False
+2024-10-15 14:03:32,682 [trainer.py] => recalc_sim: True
+2024-10-15 14:03:32,682 [trainer.py] => alpha: 0.1
+2024-10-15 14:03:32,682 [trainer.py] => use_init_ptm: False
+2024-10-15 14:03:32,683 [trainer.py] => beta: 0
+2024-10-15 14:03:32,683 [trainer.py] => use_old_data: False
+2024-10-15 14:03:32,683 [trainer.py] => use_reweight: True
+2024-10-15 14:03:32,683 [trainer.py] => moni_adam: False
+2024-10-15 14:03:32,683 [trainer.py] => adapter_num: -1
+2024-10-15 14:03:33,787 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-10-15 14:03:36,269 [hub.py] => Downloading: "https://storage.googleapis.com/vit_models/augreg/B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz" to C:\Users\ADMIN/.cache\torch\hub\checkpoints\B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz
 
-2023-11-16 15:55:44,546 [trainer.py] => Average Accuracy (CNN): 99.8 
+2024-10-15 14:05:47,439 [trainer.py] => All params: 86988288
+2024-10-15 14:05:47,446 [trainer.py] => Trainable params: 1189632
+2024-10-15 14:05:47,524 [ease.py] => Learning on 0-5
+2024-10-15 14:11:55,611 [trainer.py] => config: ./exps/ease_cifar.json
+2024-10-15 14:11:55,611 [trainer.py] => prefix:  
+2024-10-15 14:11:55,611 [trainer.py] => dataset: cifar224
+2024-10-15 14:11:55,611 [trainer.py] => memory_size: 0
+2024-10-15 14:11:55,611 [trainer.py] => memory_per_class: 0
+2024-10-15 14:11:55,611 [trainer.py] => fixed_memory: False
+2024-10-15 14:11:55,611 [trainer.py] => shuffle: True
+2024-10-15 14:11:55,611 [trainer.py] => init_cls: 5
+2024-10-15 14:11:55,611 [trainer.py] => increment: 5
+2024-10-15 14:11:55,611 [trainer.py] => model_name: ease
+2024-10-15 14:11:55,611 [trainer.py] => backbone_type: vit_base_patch16_224_ease
+2024-10-15 14:11:55,611 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-10-15 14:11:55,611 [trainer.py] => seed: 1993
+2024-10-15 14:11:55,611 [trainer.py] => init_epochs: 20
+2024-10-15 14:11:55,611 [trainer.py] => init_lr: 0.025
+2024-10-15 14:11:55,611 [trainer.py] => later_epochs: 20
+2024-10-15 14:11:55,611 [trainer.py] => later_lr: 0.025
+2024-10-15 14:11:55,611 [trainer.py] => batch_size: 48
+2024-10-15 14:11:55,611 [trainer.py] => weight_decay: 0.0005
+2024-10-15 14:11:55,611 [trainer.py] => min_lr: 0
+2024-10-15 14:11:55,617 [trainer.py] => optimizer: sgd
+2024-10-15 14:11:55,617 [trainer.py] => scheduler: cosine
+2024-10-15 14:11:55,617 [trainer.py] => pretrained: True
+2024-10-15 14:11:55,617 [trainer.py] => vpt_type: Deep
+2024-10-15 14:11:55,617 [trainer.py] => prompt_token_num: 5
+2024-10-15 14:11:55,617 [trainer.py] => ffn_num: 64
+2024-10-15 14:11:55,617 [trainer.py] => use_diagonal: False
+2024-10-15 14:11:55,617 [trainer.py] => recalc_sim: True
+2024-10-15 14:11:55,617 [trainer.py] => alpha: 0.1
+2024-10-15 14:11:55,618 [trainer.py] => use_init_ptm: False
+2024-10-15 14:11:55,618 [trainer.py] => beta: 0
+2024-10-15 14:11:55,618 [trainer.py] => use_old_data: False
+2024-10-15 14:11:55,618 [trainer.py] => use_reweight: True
+2024-10-15 14:11:55,618 [trainer.py] => moni_adam: False
+2024-10-15 14:11:55,618 [trainer.py] => adapter_num: -1
+2024-10-15 14:11:56,697 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-10-15 14:11:58,751 [trainer.py] => All params: 86988288
+2024-10-15 14:11:58,751 [trainer.py] => Trainable params: 1189632
+2024-10-15 14:11:58,780 [ease.py] => Learning on 0-5
+2024-10-15 14:15:10,453 [trainer.py] => config: ./exps/ease_cifar.json
+2024-10-15 14:15:10,453 [trainer.py] => prefix:  
+2024-10-15 14:15:10,454 [trainer.py] => dataset: cifar224
+2024-10-15 14:15:10,454 [trainer.py] => memory_size: 0
+2024-10-15 14:15:10,454 [trainer.py] => memory_per_class: 0
+2024-10-15 14:15:10,454 [trainer.py] => fixed_memory: False
+2024-10-15 14:15:10,454 [trainer.py] => shuffle: True
+2024-10-15 14:15:10,454 [trainer.py] => init_cls: 5
+2024-10-15 14:15:10,454 [trainer.py] => increment: 5
+2024-10-15 14:15:10,454 [trainer.py] => model_name: ease
+2024-10-15 14:15:10,454 [trainer.py] => backbone_type: vit_base_patch16_224_ease
+2024-10-15 14:15:10,454 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-10-15 14:15:10,454 [trainer.py] => seed: 1993
+2024-10-15 14:15:10,454 [trainer.py] => init_epochs: 20
+2024-10-15 14:15:10,454 [trainer.py] => init_lr: 0.025
+2024-10-15 14:15:10,454 [trainer.py] => later_epochs: 20
+2024-10-15 14:15:10,455 [trainer.py] => later_lr: 0.025
+2024-10-15 14:15:10,455 [trainer.py] => batch_size: 48
+2024-10-15 14:15:10,455 [trainer.py] => weight_decay: 0.0005
+2024-10-15 14:15:10,455 [trainer.py] => min_lr: 0
+2024-10-15 14:15:10,455 [trainer.py] => optimizer: sgd
+2024-10-15 14:15:10,455 [trainer.py] => scheduler: cosine
+2024-10-15 14:15:10,455 [trainer.py] => pretrained: True
+2024-10-15 14:15:10,455 [trainer.py] => vpt_type: Deep
+2024-10-15 14:15:10,455 [trainer.py] => prompt_token_num: 5
+2024-10-15 14:15:10,456 [trainer.py] => ffn_num: 64
+2024-10-15 14:15:10,456 [trainer.py] => use_diagonal: False
+2024-10-15 14:15:10,457 [trainer.py] => recalc_sim: True
+2024-10-15 14:15:10,457 [trainer.py] => alpha: 0.1
+2024-10-15 14:15:10,457 [trainer.py] => use_init_ptm: False
+2024-10-15 14:15:10,457 [trainer.py] => beta: 0
+2024-10-15 14:15:10,457 [trainer.py] => use_old_data: False
+2024-10-15 14:15:10,457 [trainer.py] => use_reweight: True
+2024-10-15 14:15:10,457 [trainer.py] => moni_adam: False
+2024-10-15 14:15:10,457 [trainer.py] => adapter_num: -1
+2024-10-15 14:15:11,538 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-10-15 14:15:13,578 [trainer.py] => All params: 86988288
+2024-10-15 14:15:13,579 [trainer.py] => Trainable params: 1189632
+2024-10-15 14:15:13,607 [ease.py] => Learning on 0-5
+2024-10-15 14:16:31,673 [trainer.py] => config: ./exps/ease_cifar.json
+2024-10-15 14:16:31,673 [trainer.py] => prefix:  
+2024-10-15 14:16:31,673 [trainer.py] => dataset: cifar224
+2024-10-15 14:16:31,673 [trainer.py] => memory_size: 0
+2024-10-15 14:16:31,673 [trainer.py] => memory_per_class: 0
+2024-10-15 14:16:31,673 [trainer.py] => fixed_memory: False
+2024-10-15 14:16:31,673 [trainer.py] => shuffle: True
+2024-10-15 14:16:31,673 [trainer.py] => init_cls: 5
+2024-10-15 14:16:31,673 [trainer.py] => increment: 5
+2024-10-15 14:16:31,673 [trainer.py] => model_name: ease
+2024-10-15 14:16:31,673 [trainer.py] => backbone_type: vit_base_patch16_224_ease
+2024-10-15 14:16:31,673 [trainer.py] => device: [device(type='cuda', index=0)]
+2024-10-15 14:16:31,673 [trainer.py] => seed: 1993
+2024-10-15 14:16:31,673 [trainer.py] => init_epochs: 20
+2024-10-15 14:16:31,673 [trainer.py] => init_lr: 0.025
+2024-10-15 14:16:31,673 [trainer.py] => later_epochs: 20
+2024-10-15 14:16:31,673 [trainer.py] => later_lr: 0.025
+2024-10-15 14:16:31,673 [trainer.py] => batch_size: 48
+2024-10-15 14:16:31,673 [trainer.py] => weight_decay: 0.0005
+2024-10-15 14:16:31,673 [trainer.py] => min_lr: 0
+2024-10-15 14:16:31,673 [trainer.py] => optimizer: sgd
+2024-10-15 14:16:31,673 [trainer.py] => scheduler: cosine
+2024-10-15 14:16:31,673 [trainer.py] => pretrained: True
+2024-10-15 14:16:31,673 [trainer.py] => vpt_type: Deep
+2024-10-15 14:16:31,673 [trainer.py] => prompt_token_num: 5
+2024-10-15 14:16:31,673 [trainer.py] => ffn_num: 64
+2024-10-15 14:16:31,673 [trainer.py] => use_diagonal: False
+2024-10-15 14:16:31,673 [trainer.py] => recalc_sim: True
+2024-10-15 14:16:31,673 [trainer.py] => alpha: 0.1
+2024-10-15 14:16:31,673 [trainer.py] => use_init_ptm: False
+2024-10-15 14:16:31,673 [trainer.py] => beta: 0
+2024-10-15 14:16:31,673 [trainer.py] => use_old_data: False
+2024-10-15 14:16:31,673 [trainer.py] => use_reweight: True
+2024-10-15 14:16:31,673 [trainer.py] => moni_adam: False
+2024-10-15 14:16:31,673 [trainer.py] => adapter_num: -1
+2024-10-15 14:16:32,754 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2024-10-15 14:16:34,774 [trainer.py] => All params: 86988288
+2024-10-15 14:16:34,774 [trainer.py] => Trainable params: 1189632
+2024-10-15 14:16:34,803 [ease.py] => Learning on 0-5
+2024-10-15 14:32:08,740 [ease.py] => Task 0, Epoch 20/20 => Loss 0.123, Train_accy 96.16
+2024-10-15 14:33:01,824 [ease.py] => Task correct: 100.0
+2024-10-15 14:33:01,824 [ease.py] => Task acc: 99.8
+2024-10-15 14:33:01,845 [trainer.py] => No NME accuracy.
+2024-10-15 14:33:01,846 [trainer.py] => CNN: {'total': 99.8, '00-04': 99.8, 'old': 0, 'new': 99.8}
+2024-10-15 14:33:01,846 [trainer.py] => CNN top1 curve: [99.8]
+2024-10-15 14:33:01,846 [trainer.py] => CNN top5 curve: [100.0]
 
-2023-11-16 15:55:44,547 [trainer.py] => All params: 86995970
-2023-11-16 15:55:44,548 [trainer.py] => Trainable params: 1189632
-2023-11-16 15:55:44,549 [ease.py] => Learning on 5-10
-2023-11-16 15:58:12,778 [ease.py] => Task 1, Epoch 20/20 => Loss 0.153, Train_accy 95.20
-2023-11-16 15:58:24,291 [ease.py] => Task correct: 98.3
-2023-11-16 15:58:24,292 [ease.py] => Task acc: 99.3
-2023-11-16 15:58:24,323 [trainer.py] => No NME accuracy.
-2023-11-16 15:58:24,323 [trainer.py] => CNN: {'total': 98.0, '00-04': 98.2, '05-09': 97.8, 'old': 98.2, 'new': 97.8}
-2023-11-16 15:58:24,324 [trainer.py] => CNN top1 curve: [99.8, 98.0]
-2023-11-16 15:58:24,324 [trainer.py] => CNN top5 curve: [100.0, 100.0]
+2024-10-15 14:33:01,846 [trainer.py] => Average Accuracy (CNN): 99.8 
 
-2023-11-16 15:58:24,324 [trainer.py] => Average Accuracy (CNN): 98.9 
+2024-10-15 14:33:01,847 [trainer.py] => All params: 86995970
+2024-10-15 14:33:01,848 [trainer.py] => Trainable params: 1189632
+2024-10-15 14:33:01,849 [ease.py] => Learning on 5-10
+2024-10-15 14:48:41,442 [ease.py] => Task 1, Epoch 20/20 => Loss 0.153, Train_accy 95.28
+2024-10-15 14:50:14,022 [ease.py] => Task correct: 98.3
+2024-10-15 14:50:14,022 [ease.py] => Task acc: 99.3
+2024-10-15 14:50:14,038 [trainer.py] => No NME accuracy.
+2024-10-15 14:50:14,038 [trainer.py] => CNN: {'total': 98.0, '00-04': 98.2, '05-09': 97.8, 'old': 98.2, 'new': 97.8}
+2024-10-15 14:50:14,038 [trainer.py] => CNN top1 curve: [99.8, 98.0]
+2024-10-15 14:50:14,038 [trainer.py] => CNN top5 curve: [100.0, 100.0]
 
-2023-11-16 15:58:24,325 [trainer.py] => All params: 87007490
-2023-11-16 15:58:24,326 [trainer.py] => Trainable params: 1189632
-2023-11-16 15:58:24,327 [ease.py] => Learning on 10-15
-2023-11-16 16:00:52,317 [ease.py] => Task 2, Epoch 20/20 => Loss 0.162, Train_accy 94.32
-2023-11-16 16:01:11,381 [ease.py] => Task correct: 97.0
-2023-11-16 16:01:11,382 [ease.py] => Task acc: 99.2
-2023-11-16 16:01:11,406 [trainer.py] => No NME accuracy.
-2023-11-16 16:01:11,406 [trainer.py] => CNN: {'total': 96.67, '00-04': 98.2, '05-09': 94.6, '10-14': 97.2, 'old': 96.4, 'new': 97.2}
-2023-11-16 16:01:11,406 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67]
-2023-11-16 16:01:11,406 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8]
+2024-10-15 14:50:14,038 [trainer.py] => Average Accuracy (CNN): 98.9 
 
-2023-11-16 16:01:11,406 [trainer.py] => Average Accuracy (CNN): 98.15666666666668 
+2024-10-15 14:50:14,038 [trainer.py] => All params: 87007490
+2024-10-15 14:50:14,038 [trainer.py] => Trainable params: 1189632
+2024-10-15 14:50:14,048 [ease.py] => Learning on 10-15
+2024-10-15 15:05:50,552 [ease.py] => Task 2, Epoch 20/20 => Loss 0.161, Train_accy 94.40
+2024-10-15 15:08:08,993 [ease.py] => Task correct: 97.0
+2024-10-15 15:08:08,993 [ease.py] => Task acc: 99.2
+2024-10-15 15:08:09,015 [trainer.py] => No NME accuracy.
+2024-10-15 15:08:09,015 [trainer.py] => CNN: {'total': 96.67, '00-04': 98.2, '05-09': 94.6, '10-14': 97.2, 'old': 96.4, 'new': 97.2}
+2024-10-15 15:08:09,018 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67]
+2024-10-15 15:08:09,018 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8]
 
-2023-11-16 16:01:11,406 [trainer.py] => All params: 87026690
-2023-11-16 16:01:11,407 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:01:11,408 [ease.py] => Learning on 15-20
-2023-11-16 16:03:39,201 [ease.py] => Task 3, Epoch 20/20 => Loss 0.163, Train_accy 95.04
-2023-11-16 16:04:06,834 [ease.py] => Task correct: 96.3
-2023-11-16 16:04:06,834 [ease.py] => Task acc: 99.05
-2023-11-16 16:04:06,853 [trainer.py] => No NME accuracy.
-2023-11-16 16:04:06,853 [trainer.py] => CNN: {'total': 95.9, '00-04': 98.2, '05-09': 93.6, '10-14': 96.8, '15-19': 95.0, 'old': 96.2, 'new': 95.0}
-2023-11-16 16:04:06,853 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9]
-2023-11-16 16:04:06,853 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55]
+2024-10-15 15:08:09,018 [trainer.py] => Average Accuracy (CNN): 98.15666666666668 
 
-2023-11-16 16:04:06,854 [trainer.py] => Average Accuracy (CNN): 97.5925 
+2024-10-15 15:08:09,019 [trainer.py] => All params: 87026690
+2024-10-15 15:08:09,020 [trainer.py] => Trainable params: 1189632
+2024-10-15 15:08:09,021 [ease.py] => Learning on 15-20
+2024-10-15 15:23:44,707 [ease.py] => Task 3, Epoch 20/20 => Loss 0.163, Train_accy 95.04
+2024-10-15 15:26:55,660 [ease.py] => Task correct: 96.3
+2024-10-15 15:26:55,660 [ease.py] => Task acc: 99.05
+2024-10-15 15:26:55,683 [trainer.py] => No NME accuracy.
+2024-10-15 15:26:55,683 [trainer.py] => CNN: {'total': 95.9, '00-04': 98.2, '05-09': 93.8, '10-14': 96.8, '15-19': 94.8, 'old': 96.27, 'new': 94.8}
+2024-10-15 15:26:55,683 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9]
+2024-10-15 15:26:55,683 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5]
 
-2023-11-16 16:04:06,854 [trainer.py] => All params: 87053570
-2023-11-16 16:04:06,855 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:04:06,856 [ease.py] => Learning on 20-25
-2023-11-16 16:06:35,388 [ease.py] => Task 4, Epoch 20/20 => Loss 0.083, Train_accy 97.08
-2023-11-16 16:07:12,893 [ease.py] => Task correct: 95.92
-2023-11-16 16:07:12,893 [ease.py] => Task acc: 99.12
-2023-11-16 16:07:12,937 [trainer.py] => No NME accuracy.
-2023-11-16 16:07:12,937 [trainer.py] => CNN: {'total': 95.56, '00-04': 97.8, '05-09': 93.0, '10-14': 95.6, '15-19': 95.0, '20-24': 96.4, 'old': 95.35, 'new': 96.4}
-2023-11-16 16:07:12,937 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56]
-2023-11-16 16:07:12,937 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44]
+2024-10-15 15:26:55,683 [trainer.py] => Average Accuracy (CNN): 97.5925 
 
-2023-11-16 16:07:12,937 [trainer.py] => Average Accuracy (CNN): 97.186 
+2024-10-15 15:26:55,693 [trainer.py] => All params: 87053570
+2024-10-15 15:26:55,693 [trainer.py] => Trainable params: 1189632
+2024-10-15 15:26:55,695 [ease.py] => Learning on 20-25
+2024-10-15 15:42:34,661 [ease.py] => Task 4, Epoch 20/20 => Loss 0.083, Train_accy 97.24
+2024-10-15 15:46:46,429 [ease.py] => Task correct: 95.96
+2024-10-15 15:46:46,430 [ease.py] => Task acc: 99.12
+2024-10-15 15:46:46,448 [trainer.py] => No NME accuracy.
+2024-10-15 15:46:46,448 [trainer.py] => CNN: {'total': 95.56, '00-04': 97.8, '05-09': 93.0, '10-14': 95.6, '15-19': 95.0, '20-24': 96.4, 'old': 95.35, 'new': 96.4}
+2024-10-15 15:46:46,448 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56]
+2024-10-15 15:46:46,449 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44]
 
-2023-11-16 16:07:12,938 [trainer.py] => All params: 87088130
-2023-11-16 16:07:12,938 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:07:12,940 [ease.py] => Learning on 25-30
-2023-11-16 16:09:41,399 [ease.py] => Task 5, Epoch 20/20 => Loss 0.088, Train_accy 97.08
-2023-11-16 16:10:29,959 [ease.py] => Task correct: 94.4
-2023-11-16 16:10:29,960 [ease.py] => Task acc: 99.23333333333333
-2023-11-16 16:10:29,981 [trainer.py] => No NME accuracy.
-2023-11-16 16:10:29,981 [trainer.py] => CNN: {'total': 94.17, '00-04': 96.8, '05-09': 85.6, '10-14': 94.2, '15-19': 94.4, '20-24': 96.4, '25-29': 97.6, 'old': 93.48, 'new': 97.6}
-2023-11-16 16:10:29,981 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17]
-2023-11-16 16:10:29,981 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43]
+2024-10-15 15:46:46,449 [trainer.py] => Average Accuracy (CNN): 97.186 
 
-2023-11-16 16:10:29,981 [trainer.py] => Average Accuracy (CNN): 96.68333333333334 
+2024-10-15 15:46:46,450 [trainer.py] => All params: 87088130
+2024-10-15 15:46:46,450 [trainer.py] => Trainable params: 1189632
+2024-10-15 15:46:46,450 [ease.py] => Learning on 25-30
+2024-10-15 16:02:32,645 [ease.py] => Task 5, Epoch 20/20 => Loss 0.089, Train_accy 97.12
+2024-10-15 16:07:51,541 [ease.py] => Task correct: 94.26666666666667
+2024-10-15 16:07:51,541 [ease.py] => Task acc: 99.23333333333333
+2024-10-15 16:07:51,559 [trainer.py] => No NME accuracy.
+2024-10-15 16:07:51,560 [trainer.py] => CNN: {'total': 94.03, '00-04': 96.8, '05-09': 85.6, '10-14': 93.8, '15-19': 94.2, '20-24': 96.4, '25-29': 97.4, 'old': 93.36, 'new': 97.4}
+2024-10-15 16:07:51,560 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03]
+2024-10-15 16:07:51,560 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4]
 
-2023-11-16 16:10:29,982 [trainer.py] => All params: 87130370
-2023-11-16 16:10:29,982 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:10:29,984 [ease.py] => Learning on 30-35
-2023-11-16 16:12:58,001 [ease.py] => Task 6, Epoch 20/20 => Loss 0.174, Train_accy 93.80
-2023-11-16 16:13:58,729 [ease.py] => Task correct: 93.51428571428572
-2023-11-16 16:13:58,729 [ease.py] => Task acc: 99.11428571428571
-2023-11-16 16:13:58,768 [trainer.py] => No NME accuracy.
-2023-11-16 16:13:58,769 [trainer.py] => CNN: {'total': 93.17, '00-04': 96.8, '05-09': 85.4, '10-14': 93.8, '15-19': 91.8, '20-24': 96.2, '25-29': 97.4, '30-34': 90.8, 'old': 93.57, 'new': 90.8}
-2023-11-16 16:13:58,769 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17]
-2023-11-16 16:13:58,769 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34]
+2024-10-15 16:07:51,560 [trainer.py] => Average Accuracy (CNN): 96.66000000000001 
 
-2023-11-16 16:13:58,769 [trainer.py] => Average Accuracy (CNN): 96.18142857142857 
+2024-10-15 16:07:51,561 [trainer.py] => All params: 87130370
+2024-10-15 16:07:51,561 [trainer.py] => Trainable params: 1189632
+2024-10-15 16:07:51,564 [ease.py] => Learning on 30-35
+2024-10-15 16:23:40,581 [ease.py] => Task 6, Epoch 20/20 => Loss 0.174, Train_accy 93.72
+2024-10-15 16:30:13,945 [ease.py] => Task correct: 93.48571428571428
+2024-10-15 16:30:13,945 [ease.py] => Task acc: 99.11428571428571
+2024-10-15 16:30:13,965 [trainer.py] => No NME accuracy.
+2024-10-15 16:30:13,965 [trainer.py] => CNN: {'total': 93.14, '00-04': 96.8, '05-09': 85.2, '10-14': 93.8, '15-19': 91.8, '20-24': 96.2, '25-29': 97.6, '30-34': 90.6, 'old': 93.57, 'new': 90.6}
+2024-10-15 16:30:13,965 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14]
+2024-10-15 16:30:13,965 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34]
 
-2023-11-16 16:13:58,770 [trainer.py] => All params: 87180290
-2023-11-16 16:13:58,771 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:13:58,775 [ease.py] => Learning on 35-40
-2023-11-16 16:16:26,652 [ease.py] => Task 7, Epoch 20/20 => Loss 0.098, Train_accy 96.96
-2023-11-16 16:17:40,662 [ease.py] => Task correct: 92.425
-2023-11-16 16:17:40,663 [ease.py] => Task acc: 99.125
-2023-11-16 16:17:40,694 [trainer.py] => No NME accuracy.
-2023-11-16 16:17:40,695 [trainer.py] => CNN: {'total': 92.1, '00-04': 90.6, '05-09': 85.2, '10-14': 93.0, '15-19': 90.2, '20-24': 96.0, '25-29': 95.4, '30-34': 90.4, '35-39': 96.0, 'old': 91.54, 'new': 96.0}
-2023-11-16 16:17:40,695 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1]
-2023-11-16 16:17:40,695 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22]
+2024-10-15 16:30:13,966 [trainer.py] => Average Accuracy (CNN): 96.15714285714286 
 
-2023-11-16 16:17:40,695 [trainer.py] => Average Accuracy (CNN): 95.67125 
+2024-10-15 16:30:13,967 [trainer.py] => All params: 87180290
+2024-10-15 16:30:13,968 [trainer.py] => Trainable params: 1189632
+2024-10-15 16:30:13,970 [ease.py] => Learning on 35-40
+2024-10-15 16:46:00,040 [ease.py] => Task 7, Epoch 20/20 => Loss 0.098, Train_accy 96.84
+2024-10-15 16:53:50,152 [ease.py] => Task correct: 92.45
+2024-10-15 16:53:50,152 [ease.py] => Task acc: 99.125
+2024-10-15 16:53:50,183 [trainer.py] => No NME accuracy.
+2024-10-15 16:53:50,183 [trainer.py] => CNN: {'total': 92.12, '00-04': 90.6, '05-09': 85.2, '10-14': 93.2, '15-19': 90.4, '20-24': 96.0, '25-29': 95.2, '30-34': 90.4, '35-39': 96.0, 'old': 91.57, 'new': 96.0}
+2024-10-15 16:53:50,184 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12]
+2024-10-15 16:53:50,184 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22]
 
-2023-11-16 16:17:40,695 [trainer.py] => All params: 87237890
-2023-11-16 16:17:40,696 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:17:40,700 [ease.py] => Learning on 40-45
-2023-11-16 16:20:08,356 [ease.py] => Task 8, Epoch 20/20 => Loss 0.139, Train_accy 95.44
-2023-11-16 16:21:37,101 [ease.py] => Task correct: 91.55555555555556
-2023-11-16 16:21:37,101 [ease.py] => Task acc: 99.22222222222223
-2023-11-16 16:21:37,142 [trainer.py] => No NME accuracy.
-2023-11-16 16:21:37,142 [trainer.py] => CNN: {'total': 91.24, '00-04': 88.6, '05-09': 85.4, '10-14': 89.4, '15-19': 90.0, '20-24': 95.8, '25-29': 95.0, '30-34': 89.4, '35-39': 95.4, '40-44': 92.2, 'old': 91.12, 'new': 92.2}
-2023-11-16 16:21:37,142 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24]
-2023-11-16 16:21:37,142 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22]
+2024-10-15 16:53:50,184 [trainer.py] => Average Accuracy (CNN): 95.6525 
 
-2023-11-16 16:21:37,142 [trainer.py] => Average Accuracy (CNN): 95.17888888888889 
+2024-10-15 16:53:50,184 [trainer.py] => All params: 87237890
+2024-10-15 16:53:50,185 [trainer.py] => Trainable params: 1189632
+2024-10-15 16:53:50,189 [ease.py] => Learning on 40-45
+2024-10-15 17:09:49,722 [ease.py] => Task 8, Epoch 20/20 => Loss 0.138, Train_accy 95.56
+2024-10-15 17:19:18,863 [ease.py] => Task correct: 91.5111111111111
+2024-10-15 17:19:18,863 [ease.py] => Task acc: 99.22222222222223
+2024-10-15 17:19:18,891 [trainer.py] => No NME accuracy.
+2024-10-15 17:19:18,891 [trainer.py] => CNN: {'total': 91.22, '00-04': 88.4, '05-09': 85.4, '10-14': 89.6, '15-19': 89.8, '20-24': 95.8, '25-29': 95.0, '30-34': 89.4, '35-39': 95.4, '40-44': 92.2, 'old': 91.1, 'new': 92.2}
+2024-10-15 17:19:18,891 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22]
+2024-10-15 17:19:18,891 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24]
 
-2023-11-16 16:21:37,143 [trainer.py] => All params: 87303170
-2023-11-16 16:21:37,144 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:21:37,150 [ease.py] => Learning on 45-50
-2023-11-16 16:24:05,494 [ease.py] => Task 9, Epoch 20/20 => Loss 0.082, Train_accy 97.56
-2023-11-16 16:25:50,575 [ease.py] => Task correct: 90.54
-2023-11-16 16:25:50,576 [ease.py] => Task acc: 99.26
-2023-11-16 16:25:50,605 [trainer.py] => No NME accuracy.
-2023-11-16 16:25:50,605 [trainer.py] => CNN: {'total': 90.26, '00-04': 88.6, '05-09': 84.6, '10-14': 87.8, '15-19': 89.6, '20-24': 95.6, '25-29': 93.0, '30-34': 89.4, '35-39': 92.8, '40-44': 91.6, '45-49': 89.6, 'old': 90.33, 'new': 89.6}
-2023-11-16 16:25:50,605 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26]
-2023-11-16 16:25:50,605 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12]
+2024-10-15 17:19:18,891 [trainer.py] => Average Accuracy (CNN): 95.16000000000001 
 
-2023-11-16 16:25:50,605 [trainer.py] => Average Accuracy (CNN): 94.687 
+2024-10-15 17:19:18,892 [trainer.py] => All params: 87303170
+2024-10-15 17:19:18,893 [trainer.py] => Trainable params: 1189632
+2024-10-15 17:19:18,897 [ease.py] => Learning on 45-50
+2024-10-15 17:35:13,388 [ease.py] => Task 9, Epoch 20/20 => Loss 0.081, Train_accy 97.64
+2024-10-15 17:45:58,481 [ease.py] => Task correct: 90.56
+2024-10-15 17:45:58,481 [ease.py] => Task acc: 99.24
+2024-10-15 17:45:58,512 [trainer.py] => No NME accuracy.
+2024-10-15 17:45:58,512 [trainer.py] => CNN: {'total': 90.3, '00-04': 88.8, '05-09': 84.6, '10-14': 88.0, '15-19': 89.4, '20-24': 95.6, '25-29': 92.8, '30-34': 89.4, '35-39': 92.8, '40-44': 91.8, '45-49': 89.8, 'old': 90.36, 'new': 89.8}
+2024-10-15 17:45:58,512 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3]
+2024-10-15 17:45:58,513 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12]
 
-2023-11-16 16:25:50,606 [trainer.py] => All params: 87376130
-2023-11-16 16:25:50,607 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:25:50,612 [ease.py] => Learning on 50-55
-2023-11-16 16:28:18,804 [ease.py] => Task 10, Epoch 20/20 => Loss 0.125, Train_accy 96.08
-2023-11-16 16:30:20,844 [ease.py] => Task correct: 89.36363636363636
-2023-11-16 16:30:20,844 [ease.py] => Task acc: 99.2
-2023-11-16 16:30:20,879 [trainer.py] => No NME accuracy.
-2023-11-16 16:30:20,879 [trainer.py] => CNN: {'total': 89.07, '00-04': 87.6, '05-09': 84.6, '10-14': 87.8, '15-19': 89.4, '20-24': 95.6, '25-29': 92.0, '30-34': 88.4, '35-39': 93.0, '40-44': 90.2, '45-49': 87.0, '50-54': 84.2, 'old': 89.56, 'new': 84.2}
-2023-11-16 16:30:20,879 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07]
-2023-11-16 16:30:20,879 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96]
+2024-10-15 17:45:58,513 [trainer.py] => Average Accuracy (CNN): 94.674 
 
-2023-11-16 16:30:20,880 [trainer.py] => Average Accuracy (CNN): 94.17636363636365 
+2024-10-15 17:45:58,514 [trainer.py] => All params: 87376130
+2024-10-15 17:45:58,515 [trainer.py] => Trainable params: 1189632
+2024-10-15 17:45:58,515 [ease.py] => Learning on 50-55
+2024-10-15 18:01:30,530 [ease.py] => Task 10, Epoch 20/20 => Loss 0.126, Train_accy 96.04
+2024-10-15 18:13:53,396 [ease.py] => Task correct: 89.45454545454545
+2024-10-15 18:13:53,396 [ease.py] => Task acc: 99.18181818181819
+2024-10-15 18:13:53,422 [trainer.py] => No NME accuracy.
+2024-10-15 18:13:53,422 [trainer.py] => CNN: {'total': 89.16, '00-04': 87.8, '05-09': 84.6, '10-14': 88.0, '15-19': 89.4, '20-24': 95.6, '25-29': 92.0, '30-34': 88.4, '35-39': 93.0, '40-44': 90.6, '45-49': 87.2, '50-54': 84.2, 'old': 89.66, 'new': 84.2}
+2024-10-15 18:13:53,422 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16]
+2024-10-15 18:13:53,425 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96]
 
-2023-11-16 16:30:20,880 [trainer.py] => All params: 87456770
-2023-11-16 16:30:20,881 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:30:20,889 [ease.py] => Learning on 55-60
-2023-11-16 16:32:49,979 [ease.py] => Task 11, Epoch 20/20 => Loss 0.221, Train_accy 92.60
-2023-11-16 16:35:10,970 [ease.py] => Task correct: 89.43333333333334
-2023-11-16 16:35:10,971 [ease.py] => Task acc: 99.16666666666667
-2023-11-16 16:35:10,996 [trainer.py] => No NME accuracy.
-2023-11-16 16:35:10,996 [trainer.py] => CNN: {'total': 89.13, '00-04': 87.4, '05-09': 84.6, '10-14': 88.0, '15-19': 89.6, '20-24': 95.4, '25-29': 92.2, '30-34': 88.4, '35-39': 92.8, '40-44': 90.4, '45-49': 86.8, '50-54': 84.4, '55-59': 89.6, 'old': 89.09, 'new': 89.6}
-2023-11-16 16:35:10,996 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13]
-2023-11-16 16:35:10,996 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87]
+2024-10-15 18:13:53,425 [trainer.py] => Average Accuracy (CNN): 94.17272727272729 
 
-2023-11-16 16:35:10,996 [trainer.py] => Average Accuracy (CNN): 93.75583333333334 
+2024-10-15 18:13:53,426 [trainer.py] => All params: 87456770
+2024-10-15 18:13:53,427 [trainer.py] => Trainable params: 1189632
+2024-10-15 18:13:53,432 [ease.py] => Learning on 55-60
+2024-10-15 18:29:25,875 [ease.py] => Task 11, Epoch 20/20 => Loss 0.220, Train_accy 92.72
+2024-10-15 18:43:30,747 [ease.py] => Task correct: 89.48333333333333
+2024-10-15 18:43:30,747 [ease.py] => Task acc: 99.13333333333334
+2024-10-15 18:43:30,766 [trainer.py] => No NME accuracy.
+2024-10-15 18:43:30,766 [trainer.py] => CNN: {'total': 89.17, '00-04': 87.6, '05-09': 84.6, '10-14': 88.2, '15-19': 89.2, '20-24': 95.4, '25-29': 92.2, '30-34': 88.4, '35-39': 92.8, '40-44': 90.6, '45-49': 87.2, '50-54': 84.2, '55-59': 89.6, 'old': 89.13, 'new': 89.6}
+2024-10-15 18:43:30,766 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17]
+2024-10-15 18:43:30,767 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85]
 
-2023-11-16 16:35:10,997 [trainer.py] => All params: 87545090
-2023-11-16 16:35:10,998 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:35:11,004 [ease.py] => Learning on 60-65
-2023-11-16 16:37:40,574 [ease.py] => Task 12, Epoch 20/20 => Loss 0.101, Train_accy 97.00
-2023-11-16 16:40:21,575 [ease.py] => Task correct: 88.78461538461538
-2023-11-16 16:40:21,576 [ease.py] => Task acc: 99.18461538461538
-2023-11-16 16:40:21,596 [trainer.py] => No NME accuracy.
-2023-11-16 16:40:21,597 [trainer.py] => CNN: {'total': 88.52, '00-04': 87.2, '05-09': 84.2, '10-14': 87.8, '15-19': 86.4, '20-24': 95.4, '25-29': 92.4, '30-34': 88.0, '35-39': 92.2, '40-44': 90.2, '45-49': 86.8, '50-54': 84.4, '55-59': 82.2, '60-64': 93.6, 'old': 88.1, 'new': 93.6}
-2023-11-16 16:40:21,597 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52]
-2023-11-16 16:40:21,597 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82]
+2024-10-15 18:43:30,767 [trainer.py] => Average Accuracy (CNN): 93.75583333333334 
 
-2023-11-16 16:40:21,597 [trainer.py] => Average Accuracy (CNN): 93.35307692307694 
+2024-10-15 18:43:30,767 [trainer.py] => All params: 87545090
+2024-10-15 18:43:30,768 [trainer.py] => Trainable params: 1189632
+2024-10-15 18:43:30,773 [ease.py] => Learning on 60-65
+2024-10-15 18:59:00,186 [ease.py] => Task 12, Epoch 20/20 => Loss 0.102, Train_accy 97.00
+2024-10-15 19:14:55,133 [ease.py] => Task correct: 88.93846153846154
+2024-10-15 19:14:55,138 [ease.py] => Task acc: 99.16923076923077
+2024-10-15 19:14:55,172 [trainer.py] => No NME accuracy.
+2024-10-15 19:14:55,172 [trainer.py] => CNN: {'total': 88.66, '00-04': 87.6, '05-09': 84.2, '10-14': 88.0, '15-19': 86.4, '20-24': 95.6, '25-29': 92.4, '30-34': 88.0, '35-39': 92.4, '40-44': 90.2, '45-49': 87.2, '50-54': 84.2, '55-59': 82.8, '60-64': 93.6, 'old': 88.25, 'new': 93.6}
+2024-10-15 19:14:55,182 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66]
+2024-10-15 19:14:55,182 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8]
 
-2023-11-16 16:40:21,597 [trainer.py] => All params: 87641090
-2023-11-16 16:40:21,598 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:40:21,604 [ease.py] => Learning on 65-70
-2023-11-16 16:42:50,478 [ease.py] => Task 13, Epoch 20/20 => Loss 0.080, Train_accy 97.44
-2023-11-16 16:45:52,554 [ease.py] => Task correct: 88.77142857142857
-2023-11-16 16:45:52,555 [ease.py] => Task acc: 99.24285714285715
-2023-11-16 16:45:52,580 [trainer.py] => No NME accuracy.
-2023-11-16 16:45:52,580 [trainer.py] => CNN: {'total': 88.53, '00-04': 84.4, '05-09': 83.8, '10-14': 86.6, '15-19': 86.2, '20-24': 95.4, '25-29': 92.6, '30-34': 87.6, '35-39': 92.0, '40-44': 90.0, '45-49': 86.4, '50-54': 83.8, '55-59': 81.2, '60-64': 92.4, '65-69': 97.0, 'old': 87.88, 'new': 97.0}
-2023-11-16 16:45:52,580 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52, 88.53]
-2023-11-16 16:45:52,580 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82, 98.8]
+2024-10-15 19:14:55,182 [trainer.py] => Average Accuracy (CNN): 93.36384615384617 
 
-2023-11-16 16:45:52,580 [trainer.py] => Average Accuracy (CNN): 93.00857142857144 
+2024-10-15 19:14:55,182 [trainer.py] => All params: 87641090
+2024-10-15 19:14:55,186 [trainer.py] => Trainable params: 1189632
+2024-10-15 19:14:55,189 [ease.py] => Learning on 65-70
+2024-10-15 19:30:26,719 [ease.py] => Task 13, Epoch 20/20 => Loss 0.080, Train_accy 97.32
+2024-10-15 19:48:20,048 [ease.py] => Task correct: 88.85714285714286
+2024-10-15 19:48:20,054 [ease.py] => Task acc: 99.22857142857143
+2024-10-15 19:48:20,073 [trainer.py] => No NME accuracy.
+2024-10-15 19:48:20,073 [trainer.py] => CNN: {'total': 88.6, '00-04': 84.6, '05-09': 84.0, '10-14': 86.8, '15-19': 86.0, '20-24': 95.4, '25-29': 92.4, '30-34': 87.8, '35-39': 92.2, '40-44': 90.0, '45-49': 86.4, '50-54': 83.8, '55-59': 81.6, '60-64': 92.4, '65-69': 97.0, 'old': 87.95, 'new': 97.0}
+2024-10-15 19:48:20,073 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66, 88.6]
+2024-10-15 19:48:20,073 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8, 98.8]
 
-2023-11-16 16:45:52,581 [trainer.py] => All params: 87744770
-2023-11-16 16:45:52,582 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:45:52,589 [ease.py] => Learning on 70-75
-2023-11-16 16:48:21,351 [ease.py] => Task 14, Epoch 20/20 => Loss 0.112, Train_accy 96.32
-2023-11-16 16:51:45,237 [ease.py] => Task correct: 87.37333333333333
-2023-11-16 16:51:45,238 [ease.py] => Task acc: 99.25333333333333
-2023-11-16 16:51:45,263 [trainer.py] => No NME accuracy.
-2023-11-16 16:51:45,263 [trainer.py] => CNN: {'total': 87.13, '00-04': 84.4, '05-09': 83.2, '10-14': 85.8, '15-19': 86.2, '20-24': 95.4, '25-29': 92.4, '30-34': 87.4, '35-39': 91.8, '40-44': 89.8, '45-49': 86.2, '50-54': 83.4, '55-59': 72.4, '60-64': 81.2, '65-69': 96.0, '70-74': 91.4, 'old': 86.83, 'new': 91.4}
-2023-11-16 16:51:45,264 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52, 88.53, 87.13]
-2023-11-16 16:51:45,264 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82, 98.8, 98.76]
+2024-10-15 19:48:20,074 [trainer.py] => Average Accuracy (CNN): 93.02357142857144 
 
-2023-11-16 16:51:45,264 [trainer.py] => Average Accuracy (CNN): 92.61666666666666 
+2024-10-15 19:48:20,075 [trainer.py] => All params: 87744770
+2024-10-15 19:48:20,076 [trainer.py] => Trainable params: 1189632
+2024-10-15 19:48:20,081 [ease.py] => Learning on 70-75
+2024-10-15 20:03:50,128 [ease.py] => Task 14, Epoch 20/20 => Loss 0.113, Train_accy 95.96
+2024-10-15 20:23:44,838 [ease.py] => Task correct: 87.37333333333333
+2024-10-15 20:23:44,838 [ease.py] => Task acc: 99.24
+2024-10-15 20:23:44,858 [trainer.py] => No NME accuracy.
+2024-10-15 20:23:44,858 [trainer.py] => CNN: {'total': 87.12, '00-04': 84.6, '05-09': 83.4, '10-14': 86.0, '15-19': 86.0, '20-24': 95.4, '25-29': 92.2, '30-34': 87.4, '35-39': 91.8, '40-44': 89.8, '45-49': 86.2, '50-54': 83.4, '55-59': 72.2, '60-64': 80.8, '65-69': 95.8, '70-74': 91.8, 'old': 86.79, 'new': 91.8}
+2024-10-15 20:23:44,858 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66, 88.6, 87.12]
+2024-10-15 20:23:44,858 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8, 98.8, 98.76]
 
-2023-11-16 16:51:45,264 [trainer.py] => All params: 87856130
-2023-11-16 16:51:45,265 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:51:45,275 [ease.py] => Learning on 75-80
-2023-11-16 16:54:14,646 [ease.py] => Task 15, Epoch 20/20 => Loss 0.109, Train_accy 96.48
-2023-11-16 16:58:03,935 [ease.py] => Task correct: 85.1375
-2023-11-16 16:58:03,936 [ease.py] => Task acc: 99.2625
-2023-11-16 16:58:03,980 [trainer.py] => No NME accuracy.
-2023-11-16 16:58:03,980 [trainer.py] => CNN: {'total': 84.94, '00-04': 83.6, '05-09': 81.8, '10-14': 85.8, '15-19': 86.0, '20-24': 95.4, '25-29': 92.2, '30-34': 87.6, '35-39': 88.6, '40-44': 89.2, '45-49': 74.2, '50-54': 73.4, '55-59': 69.0, '60-64': 80.4, '65-69': 96.0, '70-74': 87.2, '75-79': 88.6, 'old': 84.69, 'new': 88.6}
-2023-11-16 16:58:03,980 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52, 88.53, 87.13, 84.94]
-2023-11-16 16:58:03,980 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82, 98.8, 98.76, 98.66]
+2024-10-15 20:23:44,858 [trainer.py] => Average Accuracy (CNN): 92.63000000000002 
 
-2023-11-16 16:58:03,980 [trainer.py] => Average Accuracy (CNN): 92.136875 
+2024-10-15 20:23:44,858 [trainer.py] => All params: 87856130
+2024-10-15 20:23:44,858 [trainer.py] => Trainable params: 1189632
+2024-10-15 20:23:44,874 [ease.py] => Learning on 75-80
+2024-10-15 20:39:10,868 [ease.py] => Task 15, Epoch 20/20 => Loss 0.110, Train_accy 96.28
+2024-10-15 21:01:13,659 [ease.py] => Task correct: 85.075
+2024-10-15 21:01:13,659 [ease.py] => Task acc: 99.25
+2024-10-15 21:01:13,669 [trainer.py] => No NME accuracy.
+2024-10-15 21:01:13,669 [trainer.py] => CNN: {'total': 84.88, '00-04': 84.2, '05-09': 82.0, '10-14': 86.0, '15-19': 85.8, '20-24': 95.4, '25-29': 92.0, '30-34': 87.6, '35-39': 88.4, '40-44': 89.0, '45-49': 73.8, '50-54': 73.2, '55-59': 69.2, '60-64': 79.8, '65-69': 95.8, '70-74': 87.4, '75-79': 88.4, 'old': 84.64, 'new': 88.4}
+2024-10-15 21:01:13,669 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66, 88.6, 87.12, 84.88]
+2024-10-15 21:01:13,679 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8, 98.8, 98.76, 98.65]
 
-2023-11-16 16:58:03,981 [trainer.py] => All params: 87975170
-2023-11-16 16:58:03,982 [trainer.py] => Trainable params: 1189632
-2023-11-16 16:58:03,994 [ease.py] => Learning on 80-85
-2023-11-16 17:00:32,787 [ease.py] => Task 16, Epoch 20/20 => Loss 0.076, Train_accy 97.48
-2023-11-16 17:04:44,870 [ease.py] => Task correct: 84.76470588235294
-2023-11-16 17:04:44,870 [ease.py] => Task acc: 99.27058823529411
-2023-11-16 17:04:44,896 [trainer.py] => No NME accuracy.
-2023-11-16 17:04:44,896 [trainer.py] => CNN: {'total': 84.61, '00-04': 83.2, '05-09': 80.2, '10-14': 84.8, '15-19': 85.4, '20-24': 95.4, '25-29': 91.2, '30-34': 86.4, '35-39': 88.2, '40-44': 89.2, '45-49': 71.8, '50-54': 72.4, '55-59': 68.6, '60-64': 78.8, '65-69': 95.8, '70-74': 87.2, '75-79': 88.6, '80-84': 91.2, 'old': 84.2, 'new': 91.2}
-2023-11-16 17:04:44,896 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52, 88.53, 87.13, 84.94, 84.61]
-2023-11-16 17:04:44,896 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82, 98.8, 98.76, 98.66, 98.58]
+2024-10-15 21:01:13,679 [trainer.py] => Average Accuracy (CNN): 92.14562500000002 
 
-2023-11-16 17:04:44,896 [trainer.py] => Average Accuracy (CNN): 91.69411764705882 
+2024-10-15 21:01:13,679 [trainer.py] => All params: 87975170
+2024-10-15 21:01:13,680 [trainer.py] => Trainable params: 1189632
+2024-10-15 21:01:13,689 [ease.py] => Learning on 80-85
+2024-10-15 21:16:42,381 [ease.py] => Task 16, Epoch 20/20 => Loss 0.076, Train_accy 97.48
+2024-10-15 21:41:00,737 [ease.py] => Task correct: 84.75294117647059
+2024-10-15 21:41:00,737 [ease.py] => Task acc: 99.24705882352941
+2024-10-15 21:41:00,758 [trainer.py] => No NME accuracy.
+2024-10-15 21:41:00,758 [trainer.py] => CNN: {'total': 84.6, '00-04': 83.6, '05-09': 80.4, '10-14': 85.0, '15-19': 85.4, '20-24': 95.4, '25-29': 91.0, '30-34': 86.4, '35-39': 88.2, '40-44': 89.0, '45-49': 71.4, '50-54': 72.2, '55-59': 69.0, '60-64': 78.6, '65-69': 95.8, '70-74': 87.4, '75-79': 88.2, '80-84': 91.2, 'old': 84.19, 'new': 91.2}
+2024-10-15 21:41:00,764 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66, 88.6, 87.12, 84.88, 84.6]
+2024-10-15 21:41:00,764 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8, 98.8, 98.76, 98.65, 98.58]
 
-2023-11-16 17:04:44,897 [trainer.py] => All params: 88101890
-2023-11-16 17:04:44,897 [trainer.py] => Trainable params: 1189632
-2023-11-16 17:04:44,913 [ease.py] => Learning on 85-90
-2023-11-16 17:07:13,846 [ease.py] => Task 17, Epoch 20/20 => Loss 0.203, Train_accy 92.84
-2023-11-16 17:11:53,149 [ease.py] => Task correct: 84.77777777777777
-2023-11-16 17:11:53,150 [ease.py] => Task acc: 99.18888888888888
-2023-11-16 17:11:53,217 [trainer.py] => No NME accuracy.
-2023-11-16 17:11:53,217 [trainer.py] => CNN: {'total': 84.61, '00-04': 83.2, '05-09': 80.4, '10-14': 84.4, '15-19': 85.6, '20-24': 95.4, '25-29': 91.0, '30-34': 86.4, '35-39': 88.2, '40-44': 89.2, '45-49': 71.6, '50-54': 72.2, '55-59': 68.4, '60-64': 78.8, '65-69': 95.6, '70-74': 86.8, '75-79': 86.6, '80-84': 91.2, '85-89': 88.0, 'old': 84.41, 'new': 88.0}
-2023-11-16 17:11:53,218 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52, 88.53, 87.13, 84.94, 84.61, 84.61]
-2023-11-16 17:11:53,218 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82, 98.8, 98.76, 98.66, 98.58, 98.41]
+2024-10-15 21:41:00,764 [trainer.py] => Average Accuracy (CNN): 91.70176470588237 
 
-2023-11-16 17:11:53,218 [trainer.py] => Average Accuracy (CNN): 91.30055555555555 
+2024-10-15 21:41:00,765 [trainer.py] => All params: 88101890
+2024-10-15 21:41:00,766 [trainer.py] => Trainable params: 1189632
+2024-10-15 21:41:00,768 [ease.py] => Learning on 85-90
+2024-10-15 21:56:29,712 [ease.py] => Task 17, Epoch 20/20 => Loss 0.202, Train_accy 92.76
+2024-10-15 22:23:09,259 [ease.py] => Task correct: 84.73333333333333
+2024-10-15 22:23:09,268 [ease.py] => Task acc: 99.15555555555555
+2024-10-15 22:23:09,287 [trainer.py] => No NME accuracy.
+2024-10-15 22:23:09,287 [trainer.py] => CNN: {'total': 84.57, '00-04': 83.4, '05-09': 80.6, '10-14': 84.6, '15-19': 85.4, '20-24': 95.4, '25-29': 90.8, '30-34': 86.4, '35-39': 88.2, '40-44': 89.2, '45-49': 71.4, '50-54': 71.8, '55-59': 68.4, '60-64': 78.6, '65-69': 95.6, '70-74': 87.2, '75-79': 86.4, '80-84': 91.2, '85-89': 87.6, 'old': 84.39, 'new': 87.6}
+2024-10-15 22:23:09,287 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66, 88.6, 87.12, 84.88, 84.6, 84.57]
+2024-10-15 22:23:09,287 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8, 98.8, 98.76, 98.65, 98.58, 98.41]
 
-2023-11-16 17:11:53,218 [trainer.py] => All params: 88236290
-2023-11-16 17:11:53,219 [trainer.py] => Trainable params: 1189632
-2023-11-16 17:11:53,228 [ease.py] => Learning on 90-95
-2023-11-16 17:16:14,539 [ease.py] => Task 18, Epoch 20/20 => Loss 0.113, Train_accy 96.20
-2023-11-16 17:25:26,143 [ease.py] => Task correct: 84.92631578947369
-2023-11-16 17:25:26,143 [ease.py] => Task acc: 99.22105263157894
-2023-11-16 17:25:26,193 [trainer.py] => No NME accuracy.
-2023-11-16 17:25:26,193 [trainer.py] => CNN: {'total': 84.76, '00-04': 82.0, '05-09': 79.8, '10-14': 84.4, '15-19': 85.6, '20-24': 94.8, '25-29': 91.0, '30-34': 86.4, '35-39': 88.2, '40-44': 89.0, '45-49': 71.4, '50-54': 72.2, '55-59': 68.4, '60-64': 78.6, '65-69': 95.6, '70-74': 86.8, '75-79': 86.6, '80-84': 91.2, '85-89': 87.6, '90-94': 90.8, 'old': 84.42, 'new': 90.8}
-2023-11-16 17:25:26,193 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52, 88.53, 87.13, 84.94, 84.61, 84.61, 84.76]
-2023-11-16 17:25:26,193 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82, 98.8, 98.76, 98.66, 98.58, 98.41, 98.4]
+2024-10-15 22:23:09,288 [trainer.py] => Average Accuracy (CNN): 91.30555555555557 
 
-2023-11-16 17:25:26,193 [trainer.py] => Average Accuracy (CNN): 90.95631578947368 
+2024-10-15 22:23:09,289 [trainer.py] => All params: 88236290
+2024-10-15 22:23:09,290 [trainer.py] => Trainable params: 1189632
+2024-10-15 22:23:09,291 [ease.py] => Learning on 90-95
+2024-10-15 22:38:38,261 [ease.py] => Task 18, Epoch 20/20 => Loss 0.113, Train_accy 96.12
+2024-10-15 23:07:49,118 [ease.py] => Task correct: 84.87368421052632
+2024-10-15 23:07:49,118 [ease.py] => Task acc: 99.2
+2024-10-15 23:07:49,141 [trainer.py] => No NME accuracy.
+2024-10-15 23:07:49,141 [trainer.py] => CNN: {'total': 84.71, '00-04': 82.2, '05-09': 80.0, '10-14': 85.0, '15-19': 85.4, '20-24': 94.8, '25-29': 90.8, '30-34': 86.4, '35-39': 88.2, '40-44': 89.0, '45-49': 71.2, '50-54': 71.6, '55-59': 68.4, '60-64': 78.4, '65-69': 95.6, '70-74': 87.2, '75-79': 86.2, '80-84': 91.0, '85-89': 87.4, '90-94': 90.6, 'old': 84.38, 'new': 90.6}
+2024-10-15 23:07:49,141 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66, 88.6, 87.12, 84.88, 84.6, 84.57, 84.71]
+2024-10-15 23:07:49,146 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8, 98.8, 98.76, 98.65, 98.58, 98.41, 98.39]
 
-2023-11-16 17:25:26,194 [trainer.py] => All params: 88378370
-2023-11-16 17:25:26,194 [trainer.py] => Trainable params: 1189632
-2023-11-16 17:25:26,205 [ease.py] => Learning on 95-100
-2023-11-16 17:29:43,230 [ease.py] => Task 19, Epoch 20/20 => Loss 0.140, Train_accy 95.76
-2023-11-16 17:39:47,337 [ease.py] => Task correct: 84.4
-2023-11-16 17:39:47,337 [ease.py] => Task acc: 99.14
-2023-11-16 17:39:47,392 [trainer.py] => No NME accuracy.
-2023-11-16 17:39:47,393 [trainer.py] => CNN: {'total': 84.21, '00-04': 81.8, '05-09': 79.8, '10-14': 84.6, '15-19': 85.6, '20-24': 94.8, '25-29': 91.0, '30-34': 86.2, '35-39': 88.2, '40-44': 89.0, '45-49': 71.8, '50-54': 71.8, '55-59': 68.2, '60-64': 78.4, '65-69': 95.6, '70-74': 86.2, '75-79': 86.2, '80-84': 91.2, '85-89': 87.2, '90-94': 90.0, '95-99': 76.6, 'old': 84.61, 'new': 76.6}
-2023-11-16 17:39:47,393 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.17, 93.17, 92.1, 91.24, 90.26, 89.07, 89.13, 88.52, 88.53, 87.13, 84.94, 84.61, 84.61, 84.76, 84.21]
-2023-11-16 17:39:47,393 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.55, 99.44, 99.43, 99.34, 99.22, 99.22, 99.12, 98.96, 98.87, 98.82, 98.8, 98.76, 98.66, 98.58, 98.41, 98.4, 98.1]
+2024-10-15 23:07:49,146 [trainer.py] => Average Accuracy (CNN): 90.95842105263159 
 
-2023-11-16 17:39:47,393 [trainer.py] => Average Accuracy (CNN): 90.619 
+2024-10-15 23:07:49,147 [trainer.py] => All params: 88378370
+2024-10-15 23:07:49,148 [trainer.py] => Trainable params: 1189632
+2024-10-15 23:07:49,160 [ease.py] => Learning on 95-100
+2024-10-15 23:23:28,376 [ease.py] => Task 19, Epoch 20/20 => Loss 0.141, Train_accy 95.64
+2024-10-15 23:55:21,026 [ease.py] => Task correct: 84.36
+2024-10-15 23:55:21,026 [ease.py] => Task acc: 99.11
+2024-10-15 23:55:21,064 [trainer.py] => No NME accuracy.
+2024-10-15 23:55:21,065 [trainer.py] => CNN: {'total': 84.17, '00-04': 82.0, '05-09': 80.0, '10-14': 85.0, '15-19': 85.4, '20-24': 94.8, '25-29': 90.6, '30-34': 86.2, '35-39': 88.2, '40-44': 89.0, '45-49': 71.4, '50-54': 71.4, '55-59': 68.2, '60-64': 78.2, '65-69': 95.6, '70-74': 86.6, '75-79': 86.4, '80-84': 91.0, '85-89': 87.0, '90-94': 89.6, '95-99': 76.8, 'old': 84.56, 'new': 76.8}
+2024-10-15 23:55:21,065 [trainer.py] => CNN top1 curve: [99.8, 98.0, 96.67, 95.9, 95.56, 94.03, 93.14, 92.12, 91.22, 90.3, 89.16, 89.17, 88.66, 88.6, 87.12, 84.88, 84.6, 84.57, 84.71, 84.17]
+2024-10-15 23:55:21,066 [trainer.py] => CNN top5 curve: [100.0, 100.0, 99.8, 99.5, 99.44, 99.4, 99.34, 99.22, 99.24, 99.12, 98.96, 98.85, 98.8, 98.8, 98.76, 98.65, 98.58, 98.41, 98.39, 98.12]
+
+2024-10-15 23:55:21,066 [trainer.py] => Average Accuracy (CNN): 90.61900000000001 
 
