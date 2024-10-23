@@ -105,6 +105,6 @@ I would like to express our gratitude to the following repositories for offering
 - [PILOT: A Pre-Trained Model-Based Continual Learning Toolbox](https://github.com/sun-hailong/LAMDA-PILOT)
 - [RevisitingCIL](https://github.com/zhoudw-zdw/RevisitingCIL)
 
-I have also taken the code and modified it according to my requirements from the original repository
+I have taken the code and modified it according to my requirements from the original repository
 
 -[CVPR24-Ease](https://github.com/sun-hailong/CVPR24-Ease)
